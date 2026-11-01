@@ -1,0 +1,33 @@
+name: circe_island_review
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/Aeaea_map.jpg
+    - assets/images/main_beach.jpg
+    - assets/images/Whitesands-Sunset-2.jpg
+    - assets/images/ke-aloha-kaanapali-beach-sunset.jpg
+    - assets/images/c7db90136e201b24dba8ae5b971377cc.jpg
+    - assets/images/beach-front-i-kurtz-homes-naples-img~79c189d20277d733_14-7191-1-ed726ed.jpg 
+    - assets/images/1_BoracayIsland_WhiteBeach_Philippines_shutterstock_401484094.jpg
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/Poppins/Poppins-Regular.ttf
+        - asset: assets/Poppins/Poppins-Bold.ttf
+          weight: 700
