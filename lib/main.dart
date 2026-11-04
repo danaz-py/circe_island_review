@@ -68,7 +68,19 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
             "Hello Alexandros, thank you for taking the time to leave feedback! Regarding the wine: my specialized concoctions are an acquired taste, though I find the swine form suited your charming personality far better anyway. As for the lions and wolves, they are impeccably well-mannered.",
       ),
     );
+    manager.addReview(
+  Review(
+    name: "Former Guest (Account Deleted)",
+    year: 1199,
+    text:
+        "This review has been requested to be removed by Circe's Island Management. The reviewer is no longer permitted to access their account.",
+    stars: 0,
+    response:
+        "OFFICIAL NOTICE FROM CIRCE: This review was removed for violating TripHelper's Terms of Use which assumes users to be human. We reserve the right to remove any content that violates TripHelper's guidelines.",
+  ),
+);
   }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -907,7 +919,6 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 15.0),
                 child: Container(
-                
                   width: 900,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black),
@@ -916,20 +927,25 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 15.0, right: 15, top: 15),
+                        padding: const EdgeInsets.only(
+                          left: 15.0,
+                          right: 15,
+                          top: 15,
+                        ),
                         child: Row(
                           children: [
                             Text(
                               "TRAVELER WARNING",
                               style: TextStyle(
                                 fontSize: 30,
-                                fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 17, 0),
+                                fontWeight: FontWeight.bold,
+                                color: const Color.fromARGB(255, 255, 17, 0),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(left: 8.0),
                               child: Icon(Icons.warning),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -1006,7 +1022,7 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                                 Padding(
                                   padding: EdgeInsets.only(
                                     left: 30,
-                                    top: 30,
+                                    top: 10,
                                     bottom: 30,
                                     right: 30,
                                   ),
@@ -1090,4 +1106,4 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
       ),
     );
   }
-} //962 LINES!!!!!
+} 

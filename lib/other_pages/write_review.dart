@@ -229,7 +229,7 @@ class WriteReview extends StatelessWidget {
                                 if (responseController.text.isNotEmpty &&
                                     ratingController.text.isNotEmpty &&
                                     titleController.text.isNotEmpty &&
-                                    yearController.text.isNotEmpty) {
+                                    yearController.text.isNotEmpty && (int.tryParse(ratingController.text) ?? 0) > 0) {
                                   final newSession = Review(
                                     name: titleController.text,
                                     year: int.tryParse(yearController.text) ?? 0,
