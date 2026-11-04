@@ -164,7 +164,7 @@ class WriteReview extends StatelessWidget {
                               child: TextField(
                                 controller: ratingController,
                                 decoration: InputDecoration(
-                                  labelText: "Input integer between 0-5",
+                                  labelText: "Input integer between 1-5",
                                 ),
                               ),
                             ),

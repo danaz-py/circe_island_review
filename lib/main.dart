@@ -40,6 +40,8 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
         text:
             "Aeaea is the most beautiful tropical getaway in the wine dark sea. The host, Circe, is incredibly attentive (and sexy) once you get to know her! She serves top-tier wine and dishes that are out of this world. The accommodations are opulent, surrounded by mountain lions and wolves that are tame. My crew and I only planned to stay for a weekend, but we ended up extending our trip for a whole year. Just a quick heads-up: make sure to bring some Moly herb if you want to keep your head clear. Highly recommend!",
         stars: 5,
+        response:
+            "Thank you for the glowing review, Odysseus! It was truly a pleasure hosting you and your... lively crew for the year. I’m glad you appreciated the local wildlife and the hospitality, even if you did cheat a little with the Moly herb! You're welcome back on Aeaea anytime!",
       ),
     );
 
@@ -50,6 +52,8 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
         text:
             'I tried to warn everyone. I literally stood outside the front doors and said, "Hey, maybe we shouldnt walk into the mysterious house in the middle of the woods where a woman is singing eerie songs," but did anyone listen to me? No. What was supposed to be a quick stopover turned into an entire year of our captain sitting around in luxury while the rest of us just wanted to go home to Ithaca.\nPros: The food (once it stopped being laced with transformation potions) was actually pretty good.\nCons: High risk of being turned into swine. The host is an immortal sorceress with major boundary issues.',
         stars: 1,
+        response:
+            "Dear Eurylochus, I’m so sorry my humble estate didn’t live up to your standards! Next time, feel free to guard the ship outside in the rain while the rest of your crew enjoys the 5-star meal. As for the whole 'swine' incident, you are what you eat! Best of luck on the rest of your voyage home. I hear Scylla and Charybdis love a guest with an attitude!",
       ),
     );
 
@@ -60,6 +64,8 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
         text:
             "The wine tasted a little weird, and before I could even finish my cup, she pulled out a wand, tapped me on the shoulder, and turned me into a literal pig. Next thing I knew, I was locked in a wooden sty eating acorns with the rest of the scouting party. No privacy, terrible amenities, zero customer service. We were stuck in pig form for days until our captain had to come threaten her with a magical herb just to get us turned back into humans. Also, there are wild lions and wolves just roaming the property. They don't attack, but they brush up against you like giant housecats, which is super unnerving. Would not recommend to any weary travelers. Avoid at all costs!",
         stars: 1,
+        response:
+            "Hello Alexandros, thank you for taking the time to leave feedback! Regarding the wine: my specialized concoctions are an acquired taste, though I find the swine form suited your charming personality far better anyway. As for the lions and wolves, they are impeccably well-mannered.",
       ),
     );
   }
@@ -490,6 +496,7 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                   ],
                 ),
               ),
+              //RATING BOX!!
               Padding(
                 padding: const EdgeInsets.only(bottom: 30),
                 child: ColoredBox(
@@ -896,6 +903,47 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                   ),
                 ),
               ),
+              //TRAVELER WARNING
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15.0),
+                child: Container(
+                
+                  width: 900,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0, right: 15, top: 15),
+                        child: Row(
+                          children: [
+                            Text(
+                              "TRAVELER WARNING",
+                              style: TextStyle(
+                                fontSize: 30,
+                                fontWeight: FontWeight.bold, color: const Color.fromARGB(255, 255, 17, 0),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8.0),
+                              child: Icon(Icons.warning),
+                            )
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15.0, bottom: 15),
+                        child: Text(
+                          "Several recent guest reviews report unannounced physical transformations and sudden livestock confinement. Travelers are advised to exercise caution when dining with the host.",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
               for (var review in manager.getReviews())
                 Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -912,7 +960,6 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                           padding: const EdgeInsets.all(8.0),
                           //REIVEWS
                           child: Wrap(
-                            //keeps formatting
                             spacing: 8.0,
                             runSpacing: 8.0,
                             children: [
@@ -953,6 +1000,70 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                                 ],
                               ),
                               Text(review.text),
+                              //IF CIRCES RESPONSE
+                              if (review.response != null &&
+                                  review.response!.isNotEmpty)
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    left: 30,
+                                    top: 30,
+                                    bottom: 30,
+                                    right: 30,
+                                  ),
+                                  child: Container(
+                                    width: 700,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.black),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Wrap(
+                                        //keeps formatting
+                                        spacing: 8.0,
+                                        runSpacing: 8.0,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Icon(Icons.account_circle),
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                          left: 3.0,
+                                                          right: 8,
+                                                        ),
+                                                    child: Text(
+                                                      "Circe (OWNER)",
+                                                      style: TextStyle(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 20,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text("${review.year} BCE"),
+                                                ],
+                                              ),
+                                            ],
+                                          ),
+                                          Text(review.response.toString()),
+                                          Text(
+                                            "This response is the subjective opinion of the management representative and not of TripHelper LLC nor of its partners.",
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
                             ],
                           ),
                         ),
@@ -960,6 +1071,19 @@ class _CirceReviewAppState extends State<CirceReviewApp> {
                     ),
                   ),
                 ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "See More Reviews",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

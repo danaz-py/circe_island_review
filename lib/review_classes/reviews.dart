@@ -5,12 +5,14 @@ class Review{
   final int year;
   final String text;
   final int stars;
+  final String? response;
 
   Review({
     required this.name,
     required this.year,
     required this.text,
-    required this.stars
+    required this.stars,
+    this.response
   });
   
 }
