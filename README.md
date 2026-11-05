@@ -3,6 +3,7 @@
 This is a school project for my sophomore year in 2026. Based on the text, the Odyssey, I created a spin off review website on Aeaea and named it Circe's Island Resort. This project was entirely made by me with MINIMAL use of AI.
 
 The Odyssey Creative Project Artist Statement
+
 The rise of social media allowed for the development of widespread psychological persuasion. However, human manipulation has always existed, way before things like Instagram were ever conceived. Since the beginning of time, people have told stories of tricksters and the tricked, stories of characters like Odysseus and the suitors. That is why I chose the subject of human manipulation, specifically in the realm of social media—because I want to shed light on the naturalness of duplicity in humans. 
 
 The individuals that we find in Robert Fagles’s translation of The Odyssey are not much different from ourselves. We like satisfied stomachs, hospitality (xenia), and glory (kleos). We have superstitions; black cats will still strike fear in people while others will laugh, just as eagles sent from Zeus will strike fear in bird prophets while others will jeer. We succumb to gratification, whether it is the desire for gifts or one more scroll. Most of all, to get that gratification, we manipulate. 
